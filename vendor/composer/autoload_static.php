@@ -8,7 +8,12 @@ class ComposerStaticInit21426813ddd78d21f2b0a9c4d0d406df
 {
     public static $files = array (
         'ba66f41e40a9697abbd6ad188c225b53' => __DIR__ . '/..' . '/swoft/stdlib/src/Helper/Functions.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
+        'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '9ae26d4cc56bd1c2226b67ffc59eacc2' => __DIR__ . '/..' . '/swoft/bean/src/Helper/Functions.php',
         'cc37a1befbed2103104b095911899e94' => __DIR__ . '/..' . '/swoft/console/src/Helper/Functions.php',
         '40725293a2ac2c3dc06eda78738e3ff6' => __DIR__ . '/..' . '/swoft/framework/src/Helper/Functions.php',
@@ -33,6 +38,10 @@ class ComposerStaticInit21426813ddd78d21f2b0a9c4d0d406df
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Php72\\' => 23,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
+            'Symfony\\Polyfill\\Iconv\\' => 23,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\Service\\' => 26,
             'Symfony\\Contracts\\Cache\\' => 24,
@@ -85,6 +94,7 @@ class ComposerStaticInit21426813ddd78d21f2b0a9c4d0d406df
             'Prophecy\\' => 9,
             'PhpParser\\' => 10,
             'PhpDocReader\\' => 13,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'M' => 
         array (
@@ -93,6 +103,10 @@ class ComposerStaticInit21426813ddd78d21f2b0a9c4d0d406df
         'L' => 
         array (
             'Leuffen\\TextTemplate\\' => 21,
+        ),
+        'E' => 
+        array (
+            'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
         array (
@@ -125,6 +139,22 @@ class ComposerStaticInit21426813ddd78d21f2b0a9c4d0d406df
         'Toolkit\\Cli\\' => 
         array (
             0 => __DIR__ . '/..' . '/toolkit/cli-utils/src',
+        ),
+        'Symfony\\Polyfill\\Php72\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Intl\\Idn\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-idn',
+        ),
+        'Symfony\\Polyfill\\Iconv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-iconv',
         ),
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
@@ -323,6 +353,10 @@ class ComposerStaticInit21426813ddd78d21f2b0a9c4d0d406df
         array (
             0 => __DIR__ . '/..' . '/php-di/phpdoc-reader/src/PhpDocReader',
         ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -330,6 +364,10 @@ class ComposerStaticInit21426813ddd78d21f2b0a9c4d0d406df
         'Leuffen\\TextTemplate\\' => 
         array (
             0 => __DIR__ . '/..' . '/text/template/src',
+        ),
+        'Egulias\\EmailValidator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
         ),
         'Dotenv\\' => 
         array (

@@ -9,7 +9,7 @@
 #*.lock
 #.phpintel/
 #.env
-#.phpstorm.meta.php
+#.phpstorm.meta.pehp
 #.DS_Store
 #public/devtool/
 #bin/php-cs-fixer

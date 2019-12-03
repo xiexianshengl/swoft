@@ -25,22 +25,26 @@ use Swoft\Db\Database;
 use Swoft\Redis\RedisDb;
 
 return [
+    'lineFormatter'      => [
+        'format'     => '%datetime% %messages%',
+        'dateFormat' => 'Y-m-d H:i:s',
+    ],
     'noticeHandler'      => [
-        'logFile' => '@runtime/logs/notice-%d{Y-m-d-H}.log',
+        'logFile'   => '@runtime/logs/notice-%d{Y-m-d}.log',  // 2.0.6 支持日志按时间切割
     ],
     'applicationHandler' => [
         'logFile' => '@runtime/logs/error-%d{Y-m-d}.log',
     ],
     'logger'            => [
         'flushRequest' => false,
-        'enable'       => false,
-        'json'         => false,
+        'enable'       => true,
+        'json'         => true,
     ],
     'httpServer'        => [
         'class'    => HttpServer::class,
         'port'     => 8000,
         'listener' => [
-            'rpc' => bean('rpcServer')
+//            'rpc' => bean('rpcServer')
         ],
         'process'  => [
 //            'monitor' => bean(MonitorProcess::class)
@@ -72,14 +76,14 @@ return [
     ],
     'db'                => [
         'class'    => Database::class,
-        'dsn'      => 'mysql:dbname=test;host=127.0.0.1',
-        'username' => 'root',
-        'password' => 'swoft123456',
+        'dsn'        => 'mysql:dbname=li_product_db;host=mysql.cloud.li91.net',
+        'username'   => 'root',
+        'password' => 'vwC4ZVqO',
     ],
     'db2'               => [
         'class'      => Database::class,
-        'dsn'        => 'mysql:dbname=test2;host=127.0.0.1',
-        'username'   => 'root',
+        'dsn'        => 'mysql:dbname=test2;host=192.168.1.2',
+        'username'   => 'superman',
         'password'   => 'swoft123456',
 //        'dbSelector' => bean(DbSelector::class)
     ],
@@ -102,7 +106,7 @@ return [
     ],
     'redis'             => [
         'class'    => RedisDb::class,
-        'host'     => '127.0.0.1',
+        'host'     => '192.168.1.2',
         'port'     => 6379,
         'database' => 0,
         'option'   => [
@@ -112,7 +116,7 @@ return [
     'user'              => [
         'class'   => ServiceClient::class,
         'host'    => '127.0.0.1',
-        'port'    => 18307,
+        'port'    => 8000,
         'setting' => [
             'timeout'         => 0.5,
             'connect_timeout' => 1.0,
@@ -127,6 +131,7 @@ return [
     ],
     'rpcServer'         => [
         'class' => ServiceServer::class,
+        'port'    => 8000,
     ],
     'wsServer'          => [
         'class'   => WebSocketServer::class,
